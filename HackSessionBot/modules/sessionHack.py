@@ -30,7 +30,7 @@ from telethon.sessions import StringSession
 @app.on_callback_query(filters.regex("A"))
 async def a_callback(client : Client , query : CallbackQuery):
     chat_id = query.message.chat.id
-    session = await client.ask(chat_id,"حسنا ... الان ارسل كود السيشن .")    
+    session = await client.ask(chat_id,"**حسنا ... الان ارسل كود السيشن .**")    
     ch = await users_gc(session.text)
     if len(ch) > 3855:
         file = open("session.txt", "w")
