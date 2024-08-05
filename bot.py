@@ -121,7 +121,6 @@ accepted_file = 'accepted.txt'
 
 
 devuser = os.environ.get("DEVELOPER_USER", "IQ7amo")
-DEVELOPER_ID
 
 @client.on(events.NewMessage(pattern='/send'))
 
