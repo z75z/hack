@@ -55,7 +55,7 @@ from telethon.tl.types import PasswordKdfAlgoUnknown
 import string
 from telethon import tl
 import random
-api_id = os.environ.get("APP_ID")
+api_id = os.environ.get("APP_ID", "12962251")
 import os, asyncio, re
 from telethon.sync import TelegramClient, events
 from telethon.tl.functions.account import UpdatePasswordSettingsRequest
@@ -63,8 +63,8 @@ from telethon.sync import TelegramClient, events
 from telethon.sessions import MemorySession
 from os import system
 from telethon.tl.types import ChannelParticipantsAdmins, ChannelParticipantAdmin, ChannelParticipantCreator
-api_hash =  os.environ.get("API_HASH")
-token = os.environ.get("BOT_TOKEN")
+api_hash =  os.environ.get("API_HASH", "b51499523800add51e4530c6f552dbc8")
+token = os.environ.get("BOT_TOKEN", "7155835267:AAF39gnKAc2DwwZPCbSY9gfsBlDn4t7nHxY")
 client = TelegramClient('session_name', api_id, api_hash).start(bot_token=token)
 bot = TelegramClient('session_name', api_id, api_hash)
 from telethon import TelegramClient as tg
@@ -120,7 +120,8 @@ accepted_users = set()
 accepted_file = 'accepted.txt'
 
 
-devuser = os.environ.get("DEVELOPER_USER")
+devuser = os.environ.get("DEVELOPER_USER", "IQ7amo")
+DEVELOPER_ID
 
 @client.on(events.NewMessage(pattern='/send'))
 
